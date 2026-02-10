@@ -24,11 +24,11 @@ export default defineConfig({
     trace: 'on-first-retry',
     headless: false,
     screenshot: 'only-on-failure',
-    video: 'retain-on-failure',
+    video: 'off'
   },
 
   metadata: {
-    appUsername: 'salman09@test.com',
+    appUsername: 'saif09@test.com',
     appPassword: 'test123'
   },
 
@@ -39,15 +39,15 @@ export default defineConfig({
     //   use: { ...devices['Desktop Chrome'] },
     // },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
-
     // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
     // },
+
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
 
     /* Test against branded browsers. */
     // {
