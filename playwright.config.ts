@@ -12,20 +12,21 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
-    ['html'],
+    ['list'],
+    ['html', {open: 'never'}],
     ['allure-playwright'],
-    ['playwright-html-reporter', { 
-      testFolder: 'tests',
-      title: 'OPEN CART HTML Report',
-      project: 'Open Cart',
-      release: '9.87.6',
-      testEnvironment: 'QA',
-      embedAssets: true,
-      embedAttachments: true,
-      outputFolder: 'playwright-html-report',
-      minifyAssets: true,
-      startServer: true,
-    }]
+    // ['playwright-html-reporter', { 
+    //   testFolder: 'tests',
+    //   title: 'OPEN CART HTML Report',
+    //   project: 'Open Cart',
+    //   release: '9.87.6',
+    //   testEnvironment: 'QA',
+    //   embedAssets: true,
+    //   embedAttachments: true,
+    //   outputFolder: 'playwright-html-report',
+    //   minifyAssets: true,
+    //   startServer: true,
+    // }]
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -36,6 +37,13 @@ export default defineConfig({
     trace: 'on-first-retry',
     headless: false,
     screenshot: 'only-on-failure',
+    video: 'retain-on-failure',
+
+    //httpCredentials is unique, no duplicates
+    httpCredentials: {
+      username: 'admin',
+      password: 'admin'
+    }
   },
 
   metadata: {
@@ -103,5 +111,7 @@ export default defineConfig({
       },
     },
   ],
+
+  
 
 });
