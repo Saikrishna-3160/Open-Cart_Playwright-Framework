@@ -1,11 +1,11 @@
 import { LoginPage } from '../pages/LoginPage.js';
 import { test, expect } from '../fixtures/baseFixtures.js';
 
-test('verify valid login @login @sanity', async ({homePage}) => {
+test('verify valid login @login @sample', async ({homePage}) => {
     await expect(homePage.page).toHaveTitle('My Account');
 });
 
-test('verify invalid login', async ({page, baseURL}) => {
+test('verify invalid login @sample', async ({page, baseURL}) => {
     let loginPage = new LoginPage(page);
     await loginPage.goToLoginPage(baseURL);
     await loginPage.doLogin('abc@nal.com', 'test652');
