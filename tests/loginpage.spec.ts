@@ -5,7 +5,7 @@ test('verify valid login @login @sanity', async ({homePage}) => {
     await expect(homePage.page).toHaveTitle('My Account');
 });
 
-test.skip('verify invalid login', async ({page, baseURL}) => {
+test('verify invalid login', async ({page, baseURL}) => {
     let loginPage = new LoginPage(page);
     await loginPage.goToLoginPage(baseURL);
     await loginPage.doLogin('abc@nal.com', 'test652');

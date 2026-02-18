@@ -146,6 +146,6 @@ jobs:
       - name: Report URLs
         run: |
           echo "Reports Published!"
-          echo "Playwright Built-in: https://github.com/Saikrishna-3160/Open-Cart_Playwright-Framework/playwright-report/index.html"
-          echo "Playwright HTML Reporter: https://github.com/Saikrishna-3160/Open-Cart_Playwright-Framework/playwright-html-report/index.html"
-          echo "Allure: https://github.com/Saikrishna-3160/Open-Cart_Playwright-Framework/allure-report/index.html"
+          echo "Playwright Built-in: https://Saikrishna-3160.github.io/Open-Cart_Playwright-Framework/playwright-report/index.html"
+          echo "Playwright HTML Reporter: https://Saikrishna-3160.github.io/Open-Cart_Playwright-Framework/playwright-html-report/index.html"
+          echo "Allure: https://Saikrishna-3160.github.io/Open-Cart_Playwright-Framework/allure-report/index.html"

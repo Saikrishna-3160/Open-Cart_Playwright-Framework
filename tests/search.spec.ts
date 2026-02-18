@@ -1,5 +1,4 @@
-import { LoginPage } from '../pages/LoginPage.js';
-import { HomePage } from '../pages/HomePage.js';
+
 import { ResultsPage } from '../pages/ResultsPage.js';
 import { test, expect } from '../fixtures/baseFixtures.js';
 
