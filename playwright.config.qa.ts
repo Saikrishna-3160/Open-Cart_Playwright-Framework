@@ -21,7 +21,7 @@ export default defineConfig({
     baseURL: 'https://naveenautomationlabs.com/opencart/index.php',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'off',
     headless: true,
     screenshot: 'only-on-failure',
     video: 'off'

@@ -1,7 +1,6 @@
 import {test as base, expect} from '@playwright/test';
 import {HomePage} from '../pages/HomePage.js';
 import { LoginPage } from '../pages/LoginPage.js';
-import { log } from 'node:console';
 
 
 type MyFixtures = {
