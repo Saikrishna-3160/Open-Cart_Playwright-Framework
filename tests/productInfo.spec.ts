@@ -10,7 +10,7 @@ let search = [
 
 for (let product of search){
 
-    test(`verify product Headers ${product.productname}`, {tag: ['@product', '@sanity'], 
+    test(`verify product Headers ${product.productname}`, {tag: ['@product', '@sanity', '@sample'], 
         annotation: [{type: 'epic', description: 'EPIC-100 Validate the products info'},
             {type: 'feature', description: 'Product page feature'},
             {type: 'story', description: 'US 50 - the selected product label is displayed'},
@@ -28,7 +28,7 @@ for (let product of search){
 
 for (let product of search){
 
-    test(`verify product Images ${product.productname} : ${product.imagecount}`, {tag: ['@product', '@sanity', '@search']}, async ({homePage}) => {
+    test(`verify product Images ${product.productname} : ${product.imagecount}`, {tag: ['@product', '@sanity', '@search', '@sample']}, async ({homePage}) => {
 
      let resultsPage: ResultsPage = await homePage.doSearch(product.searchkey);
     let productInfoPage: ProductInfoPage = await resultsPage.selectProduct(product.productname);
@@ -36,7 +36,7 @@ for (let product of search){
     })
 }
 
-test(`verify product MetaData`, async ({homePage}) => {
+test(`verify product MetaData '@sample'`, async ({homePage}) => {
 
     let resultsPage: ResultsPage = await homePage.doSearch('macbook');
 
