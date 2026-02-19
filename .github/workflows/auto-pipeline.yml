@@ -840,8 +840,8 @@ jobs:
           username: ${{ secrets.MAIL_USERNAME }}
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: "${{ steps.status.outputs.status_emoji }} Playwright Tests: ${{ steps.status.outputs.status_text }} - ${{ github.repository }}"
-          to: ${{ secrets.NOTIFICATION_EMAILS }}
-          from: ${{ secrets.MAIL_FROM }}
+          to: ${{ secrets.MAIL_TO }}
+          from: GitHub Actions <${{ secrets.MAIL_USERNAME }}>  #${{ secrets.MAIL_FROM }}
           html_body: |
             <!DOCTYPE html>
             <html>
