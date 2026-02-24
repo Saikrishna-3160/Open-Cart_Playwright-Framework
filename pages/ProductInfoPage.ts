@@ -66,7 +66,6 @@ export class ProductInfoPage {
             let metadata: string[] = meta.split(':');
             let metaKey = metadata[0].trim();
             let metaValue = metadata[1].trim();
-            
             this.productMap.set(metaKey, metaValue);
         }
     }
@@ -77,8 +76,7 @@ export class ProductInfoPage {
         let productPricing: string[] = await this.productPriceData.allInnerTexts();
         let productPrice = productPricing[0].trim();
         let productExTax = productPricing[1].split(':')[1].trim();
-
         this.productMap.set('price', productPrice);
-        this.productMap.set('tax', productExTax);
+        this.productMap.set('exTaxPrice', productExTax);
     }
 }

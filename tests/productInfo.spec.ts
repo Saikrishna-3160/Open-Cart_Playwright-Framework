@@ -36,7 +36,7 @@ for (let product of search){
     })
 }
 
-test(`verify product MetaData '@sample'`, async ({homePage}) => {
+test(`verify product MetaData @sample`, async ({homePage}) => {
 
     let resultsPage: ResultsPage = await homePage.doSearch('macbook');
 
@@ -50,7 +50,7 @@ test(`verify product MetaData '@sample'`, async ({homePage}) => {
     expect.soft(actualProductFullDetails.get('Availability')).toBe('Out Of Stock');
     })
 
-test.skip(`verify product Pricing`, async ({homePage, page}) => {
+test(`verify product Pricing @sample`, async ({homePage, page}) => {
 
     let resultsPage: ResultsPage = await homePage.doSearch('macbook');
 
@@ -59,6 +59,5 @@ test.skip(`verify product Pricing`, async ({homePage, page}) => {
     
     expect.soft(actualProductFullDetails.get('header')).toBe('MacBook Pro');
     expect.soft(actualProductFullDetails.get('price')).toBe('$2,000.00');
-    await page.waitForTimeout(3000);
-    expect.soft(actualProductFullDetails.get('extaxprice')).toBe('$2,000.00');
+    expect.soft(actualProductFullDetails.get('exTaxPrice')).toBe('$2,000.00');
     })
