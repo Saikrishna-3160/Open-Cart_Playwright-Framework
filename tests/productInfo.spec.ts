@@ -30,7 +30,7 @@ for (let product of search){
 
     test(`verify product Images ${product.productname} : ${product.imagecount}`, {tag: ['@product', '@sanity', '@search', '@sample']}, async ({homePage}) => {
 
-     let resultsPage: ResultsPage = await homePage.doSearch(product.searchkey);
+    let resultsPage: ResultsPage = await homePage.doSearch(product.searchkey);
     let productInfoPage: ProductInfoPage = await resultsPage.selectProduct(product.productname);
     expect(await productInfoPage.getProductImagesCount()).toBe(product.imagecount);
     })
