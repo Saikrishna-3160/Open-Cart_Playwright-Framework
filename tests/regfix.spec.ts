@@ -23,8 +23,6 @@
 //                     user.subscribeNewsletter);
 //                 expect(isUserRegistered).toBeTruthy();
 //     }
-
-
 // });
 
 

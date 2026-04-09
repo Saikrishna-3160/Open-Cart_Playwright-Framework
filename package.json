@@ -25,16 +25,18 @@
   "devDependencies": {
     "@playwright/test": "^1.58.1",
     "@types/node": "^25.2.1",
-    "allure-commandline": "^2.36.0",
-    "allure-playwright": "^3.4.5",
-    "playwright-html-reporter": "^0.1.11",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
-    "eslint": "^8.57.0"
+    "allure-commandline": "^2.36.0",
+    "allure-playwright": "^3.4.5",
+    "eslint": "^8.57.0",
+    "playwright-html-reporter": "^0.1.11"
   },
   "dependencies": {
+    "@faker-js/faker": "^10.4.0",
     "ajv": "^8.18.0",
     "csv-parse": "^6.1.0",
+    "dotenv": "^17.4.0",
     "jsonpath-plus": "^10.3.0"
   }
 }
